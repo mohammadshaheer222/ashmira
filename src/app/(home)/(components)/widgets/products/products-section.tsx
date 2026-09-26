@@ -13,7 +13,7 @@ export default function ProductsSection() {
         heading="Pure botanicals, bottled with care"
       />
       <div
-        className="grid grid-cols-4 ipad-land:grid-cols-2 mob-land:grid-cols-1 gap-5"
+        className="grid grid-cols-4 ipad-land:grid-cols-2 gap-5"
         aria-label="Product listing"
       >
         {PRODUCTS.map((product) => (
