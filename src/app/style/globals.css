@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-suisse-light: var(--font-suisse-light);
+  --font-suisse-regular: var(--font-suisse-regular);
+  --font-suisse-medium: var(--font-suisse-medium);
+  --font-suisse-bold: var(--font-suisse-bold);
+
+  --color-primary: var(--theme-primary, #dc2626);
+  --color-secondary: var(--theme-secondary, #17AA5C);
+
+  /* Backgrounds */
+  --color-bg: var(--theme-bg, #f9fafb);
+  --color-bg-card: var(--theme-bg-card, #ffffff);
+
+  /* Text */
+  --color-heading: var(--theme-heading, #000000);
+  --color-text: var(--theme-text, #1a1a1a);
+  --color-text-muted: var(--theme-text-muted, #6b7280);
+  --color-text-on-primary: var(--theme-text-on-primary, #ffffff);
+
+  /* ── Static palette (non-dynamic) ── */
+  --color-black: #000000;
+  --color-black-soft: #0f0f0f;
+  --color-black-muted: #1a1a1a;
+  --color-black-light: #2a2a2a;
+  --color-gray-600: #6b7280;
+  --color-white: #ffffff;
+  --color-white-soft: #f9fafb;
+  --color-white-muted: #f3f4f6;
+  --color-white-light: #e5e7eb;
+  --color-theme-green: #17AA5C;
+
+  /* ── Shadows ── */
+  --shadow-card: 0 8px 30px rgb(0 0 0 / 0.02);
+}
+
+@variant lap (@media (max-width: 1600px));
+@variant md-lap (@media (max-width: 1400px));
+@variant sm-lap (@media (max-width: 1200px));
+@variant ipad-land (@media (max-width: 1024px));
+@variant mob-land (@media (max-width: 767px));
+@variant mob-lg (@media (max-width: 640px));
+@variant mob (@media (max-width: 480px));
+@variant sm-mob (@media (max-width: 375px));
+@variant xs-mob (@media (max-width: 360px));
+
+/* Show only on mobile (≤767px) — use for hamburger etc. */
+.mob-only {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mob-only {
+    display: flex;
+  }
+}
+
+/* Hide only on mobile (≤767px) — use for desktop-only elements */
+.desk-only {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .desk-only {
+    display: none;
+  }
+}
