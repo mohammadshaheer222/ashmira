@@ -12,7 +12,7 @@ function TextCard({ review, className }: ReviewCardProps) {
 
   return (
     <div
-      className={cn("rounded-2xl p-5 flex flex-col gap-3 shadow-card", className)}
+      className={cn("rounded-2xl p-5 flex flex-col gap-2 shadow-card", className)}
       style={{ backgroundColor: bg }}
     >
       <span
@@ -22,7 +22,7 @@ function TextCard({ review, className }: ReviewCardProps) {
       >
         &ldquo;
       </span>
-      <p className="text-xs text-heading leading-relaxed -mt-3">{review.quote}</p>
+      <p className="text-xs text-heading leading-relaxed -mt-2">{review.quote}</p>
       <div className="flex items-center gap-2">
         {review.avatarUrl ? (
           <div className="relative w-9 h-9 rounded-full overflow-hidden shrink-0 ring-2 ring-white">

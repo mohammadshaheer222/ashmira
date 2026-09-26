@@ -23,7 +23,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
       className={cn("rounded-2xl overflow-hidden flex flex-col shadow-card p-2 w-full", className)}
       style={{ backgroundColor: "var(--theme-bg-card, #ffffff)" }}
     >
-      <div className="relative w-full h-64 shrink-0 overflow-hidden rounded-2xl">
+      <div className="relative w-full aspect-square shrink-0 overflow-hidden rounded-2xl">
         <Image
           fill
           alt={product.name}

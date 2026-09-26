@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
     badge: "Bestseller",
     rating: 4.9,
     reviewCount: 312,
-    price: "₹38",
+    price: "₹599",
     isBestseller: true,
   },
   {
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[] = [
     badge: "New",
     rating: 4.8,
     reviewCount: 187,
-    price: "₹42",
+    price: "₹429",
     isNew: true,
   },
   {
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
       "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&auto=format&fit=crop&q=80",
     rating: 4.7,
     reviewCount: 248,
-    price: "₹34",
+    price: "₹349",
   },
   {
     id: "p4",
@@ -64,6 +64,6 @@ export const PRODUCTS: Product[] = [
     badge: "Editor's Pick",
     rating: 4.8,
     reviewCount: 156,
-    price: "₹29",
+    price: "₹290",
   },
 ];
