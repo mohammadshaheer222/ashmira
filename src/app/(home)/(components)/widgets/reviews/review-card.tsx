@@ -8,7 +8,7 @@ interface ReviewCardProps {
 }
 
 function TextCard({ review, className }: ReviewCardProps) {
-  const bg = review.accent ?? "#ffffff";
+  const bg = "#ffffff";
 
   return (
     <div
