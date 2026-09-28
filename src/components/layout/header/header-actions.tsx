@@ -26,7 +26,7 @@ export default function HeaderActions({
         {!isDrawer && (
           <button
             onClick={() => setMobileOpen(true)}
-            className="mob-only items-center justify-center p-2 text-text hover:text-heading transition-colors duration-200"
+            className="mob-only items-center justify-center p-2 text-text hover:text-heading transition-colors duration-200 cursor-pointer"
             aria-label="Open menu"
             aria-expanded={mobileOpen}
           >

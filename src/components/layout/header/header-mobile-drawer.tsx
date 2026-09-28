@@ -44,20 +44,24 @@ export default function HeaderMobileDrawer({ open, onClose }: HeaderMobileDrawer
         aria-modal="true"
         aria-label="Mobile navigation"
         className={cn(
-          "fixed inset-0 z-50 w-full h-screen bg-bg-card flex flex-col",
+          "fixed inset-0 z-50 w-full h-screen bg-bg-card flex flex-col p-5 mob-land:p-3",
           "shadow-2xl transition-opacity duration-300",
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >
-        <div className="relative flex items-center justify-between h-14 px-5 m-5 bg-bg-card ">
-          <HeaderLogo onClick={onClose} />
-          <button
-            onClick={onClose}
-            aria-label="Close menu"
-            className="p-2 text-text-muted hover:text-heading transition-colors duration-200"
-          >
-            <FeatherIcon icon="close" iconWidth={20} iconHeight={20} iconStrokeWidth={1.75} />
-          </button>
+        <div className="w-full max-w-7xl m-auto sm-lap:max-w-full shrink-0">
+          <div className="bg-bg-card rounded-xl">
+            <div className="relative flex items-center justify-between h-14 px-5">
+              <HeaderLogo onClick={onClose} />
+              <button
+                onClick={onClose}
+                aria-label="Close menu"
+                className="p-2 text-text hover:text-heading transition-colors duration-200 flex items-center justify-center cursor-pointer"
+              >
+                <FeatherIcon icon="close" iconWidth={20} iconHeight={20} iconStrokeWidth={1.75} />
+              </button>
+            </div>
+          </div>
         </div>
         <div className="flex-1 flex items-center justify-center overflow-y-auto">
           <HeaderNav variant="drawer" onLinkClick={onClose} />
