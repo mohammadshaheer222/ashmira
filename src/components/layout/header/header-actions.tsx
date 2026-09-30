@@ -14,7 +14,6 @@ interface HeaderActionsProps {
 
 export default function HeaderActions({
   variant = "header",
-  onLinkClick,
 }: HeaderActionsProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
 

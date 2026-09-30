@@ -11,13 +11,6 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, className }: ProductCardProps) {
-  const badgeColor =
-    product.badge === "New"
-      ? "bg-secondary text-white"
-      : product.badge === "Bestseller"
-        ? "bg-primary text-white"
-        : "bg-white-muted text-text";
-
   return (
     <div
       className={cn("rounded-2xl overflow-hidden flex flex-col shadow-card p-2 w-full", className)}
