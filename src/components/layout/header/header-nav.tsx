@@ -34,7 +34,7 @@ export default function HeaderNav({ variant = "header", onLinkClick }: HeaderNav
                         "flex items-center justify-center px-8 py-3 text-sm font-medium uppercase tracking-widest rounded-lg",
                         "transition-colors duration-150",
                         isActive || highlight
-                          ? "text-heading bg-bg"
+                          ? "text-heading"
                           : "text-text-muted hover:text-heading hover:bg-bg"
                       )
                     : cn(
@@ -42,7 +42,7 @@ export default function HeaderNav({ variant = "header", onLinkClick }: HeaderNav
                         "after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-heading after:transition-[width] after:duration-200",
                         "hover:after:w-full",
                         isActive
-                          ? "text-heading after:w-full"
+                          ? "text-heading"
                           : "text-text-muted hover:text-heading",
                         highlight && "text-heading"
                       )

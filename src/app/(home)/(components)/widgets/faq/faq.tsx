@@ -30,12 +30,12 @@ function FaqAccordionItem({ item, isOpen, onToggle }: FaqAccordionItemProps) {
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={`faq-answer-${item.id}`}
-        className="w-full text-left pt-6 px-6 pb-4 sm-lap:p-5 flex items-start justify-between gap-4 cursor-pointer select-none"
+        className="w-full text-left pt-6 px-6 pb-2 flex items-start justify-between gap-4 cursor-pointer select-none"
       >
         <div className="flex flex-col gap-1.5 pr-2">
           <h3
             className={cn(
-              "text-base font-medium sm-lap:text-sm leading-snug transition-colors duration-200",
+              "text-sm font-medium sm-lap:text-sm leading-snug transition-colors duration-200",
               isOpen ? "text-primary" : "text-heading"
             )}
           >
