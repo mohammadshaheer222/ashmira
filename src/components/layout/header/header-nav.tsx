@@ -21,7 +21,7 @@ export default function HeaderNav({ variant = "header", onLinkClick }: HeaderNav
     <nav aria-label={isDrawer ? "Mobile navigation" : "Main navigation"}>
       <ul className={cn(isDrawer ? "flex flex-col items-center gap-y-2" : "flex items-center gap-x-8 md-lap:gap-x-6 sm-lap:gap-x-4")}>
         {NAV_LINKS.map(({ label, href, highlight }) => {
-          const isActive = pathname === href || pathname.startsWith(`${href}/`);
+          const isActive = pathname === href;
 
           return (
             <li key={href}>

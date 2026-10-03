@@ -24,11 +24,11 @@ export default function SectionHeader({
 
   return (
     <div className={cn("max-w-2xl m-auto flex flex-col", alignClass, className)}>
-      {eyebrow && (
+      {/* {eyebrow && (
         <p className="text-xs font-semibold text-start uppercase tracking-widest text-primary">
           {eyebrow}
         </p>
-      )}
+      )} */}
       <h2 className="text-4xl sm-lap:text-2xl mob-land:text-2xl font-bold text-heading leading-tight">
         {heading}
       </h2>

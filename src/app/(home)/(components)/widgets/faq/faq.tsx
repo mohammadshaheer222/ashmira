@@ -35,7 +35,7 @@ function FaqAccordionItem({ item, isOpen, onToggle }: FaqAccordionItemProps) {
         <div className="flex flex-col gap-1.5 pr-2">
           <h3
             className={cn(
-              "text-sm font-medium sm-lap:text-sm leading-snug transition-colors duration-200",
+              "text-base font-semibold sm-lap:text-sm leading-snug transition-colors duration-200",
               isOpen ? "text-primary" : "text-heading"
             )}
           >

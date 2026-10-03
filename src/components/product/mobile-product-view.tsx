@@ -7,7 +7,6 @@ import ProductInfo from "./product-info";
 import PurchaseOptions from "./purchase-options";
 import ProductTabs from "./product-tabs";
 import RelatedProducts from "./related-products";
-import FaqSection from "@/app/(home)/(components)/widgets/faq/faq";
 import type { DetailedProduct } from "@/types/product";
 import { cn } from "@/lib/utils";
 

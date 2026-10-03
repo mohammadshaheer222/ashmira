@@ -38,7 +38,7 @@ export default function RelatedProducts({ products, className }: RelatedProducts
       />
       <div
         ref={containerRef}
-        className="grid grid-cols-4 sm-lap:grid-cols-2 mob-land:grid-cols-1 gap-6 sm-lap:gap-4 mob-land:gap-3"
+        className="grid grid-cols-4 sm-lap:grid-cols-2 gap-6 sm-lap:gap-4 mob-land:gap-3"
       >
         {products.map((item) => {
           const productData: Product = {
