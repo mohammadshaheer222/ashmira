@@ -32,7 +32,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={`${geistSans.variable} ${geistMono.variable} h-full bg-white-soft antialiased`}
       style={themeVars}
     >
-      <body className="min-h-full flex flex-col m-5 mob-land:m-3">
+      <body className="min-h-full flex flex-col m-5 mob-land:m-0">
         <Header />
         <main className="flex-1">{children}</main>
       </body>

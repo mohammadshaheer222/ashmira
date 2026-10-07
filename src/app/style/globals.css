@@ -6,15 +6,16 @@
   --font-suisse-medium: var(--font-suisse-medium);
   --font-suisse-bold: var(--font-suisse-bold);
 
-  --color-primary: var(--theme-primary, #dc2626);
+  --color-primary: var(--theme-primary, #256B3A);
   --color-secondary: var(--theme-secondary, #17AA5C);
 
   /* Backgrounds */
   --color-bg: var(--theme-bg, #f9fafb);
   --color-bg-card: var(--theme-bg-card, #ffffff);
+  --color-bg-herbal: var(--theme-bg-herbal, #DDE9DE);
 
   /* Text */
-  --color-heading: var(--theme-heading, #000000);
+  --color-heading: var(--theme-heading, #1B1B1B);
   --color-text: var(--theme-text, #1a1a1a);
   --color-text-muted: var(--theme-text-muted, #6b7280);
   --color-text-on-primary: var(--theme-text-on-primary, #ffffff);
@@ -29,7 +30,7 @@
   --color-white-soft: #f9fafb;
   --color-white-muted: #f3f4f6;
   --color-white-light: #e5e7eb;
-  --color-theme-green: #17AA5C;
+  --color-theme-green: #256B3A;
 
   /* ── Shadows ── */
   --shadow-card: 0 8px 30px rgb(0 0 0 / 0.02);

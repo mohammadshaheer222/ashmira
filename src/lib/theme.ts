@@ -10,7 +10,7 @@ export interface SiteTheme {
 }
 
 export const DEFAULT_THEME: SiteTheme = {
-  colorPrimary: "#dc2626",
+  colorPrimary: "#256B3A",
   colorSecondary: "#17AA5C",
 
   colorBg: "#f8fafc",

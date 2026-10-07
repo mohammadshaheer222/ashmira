@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
+import Button from "@/components/ui/button";
 import FeatherIcon from "@/assets/custom-icon";
 
 import type { Product } from "@/lib/constants/products-data";
@@ -49,7 +50,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
         </p>
         <div className="flex items-center justify-between">
           <span className="text-base font-bold text-heading">{product.price}</span>
-          <button
+          <Button
             type="button"
             aria-label={`Add ${product.name} to cart`}
             className="w-10 h-10 rounded-2xl bg-white-muted hover:bg-white-light flex items-center justify-center active:scale-95 transition-all duration-150 cursor-pointer shrink-0"
@@ -60,7 +61,7 @@ export default function ProductCard({ product, className }: ProductCardProps) {
               icon={"shopping-cart"}
               iconStrokeColor="var(--theme-text, #374151)"
             />
-          </button>
+          </Button>
         </div>
       </div>
     </div>

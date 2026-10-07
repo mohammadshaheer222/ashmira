@@ -3,6 +3,7 @@
 import { Fragment, useState } from "react";
 
 import FeatherIcon from "@/assets/custom-icon";
+import Button from "@/components/ui/button";
 import HeaderMobileDrawer from "./header-mobile-drawer";
 
 export type HeaderActionsVariant = "header" | "drawer";
@@ -23,14 +24,14 @@ export default function HeaderActions({
     <Fragment>
       <div className="flex items-center gap-x-1">
         {!isDrawer && (
-          <button
+          <Button
             onClick={() => setMobileOpen(true)}
             className="mob-only items-center justify-center p-2 text-text hover:text-heading transition-colors duration-200 cursor-pointer"
             aria-label="Open menu"
             aria-expanded={mobileOpen}
           >
             <FeatherIcon icon="hamburger" iconWidth={20} iconHeight={20} iconStrokeWidth={1.75} />
-          </button>
+          </Button>
         )}
       </div>
       {!isDrawer && (

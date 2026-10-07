@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import FeatherIcon from "@/assets/custom-icon";
 import { cn } from "@/lib/utils";
+import Button from "@/components/ui/button";
 
 interface ProductTabsProps {
   tabs: {
@@ -40,7 +41,7 @@ export default function ProductTabs({ tabs, className }: ProductTabsProps) {
           {TAB_CONFIG.map(({ key, label }) => {
             const isActive = activeTab === key;
             return (
-              <button
+              <Button
                 key={key}
                 type="button"
                 onClick={() => setActiveTab(key)}
@@ -55,7 +56,7 @@ export default function ProductTabs({ tabs, className }: ProductTabsProps) {
                 {isActive && (
                   <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary rounded-full" />
                 )}
-              </button>
+              </Button>
             );
           })}
         </div>
@@ -76,7 +77,7 @@ export default function ProductTabs({ tabs, className }: ProductTabsProps) {
                   : "bg-bg-card/60 hover:bg-bg-card"
               )}
             >
-              <button
+              <Button
                 type="button"
                 onClick={() => toggleAccordion(key)}
                 aria-expanded={isOpen}
@@ -107,7 +108,7 @@ export default function ProductTabs({ tabs, className }: ProductTabsProps) {
                     iconStrokeColor={isOpen ? "var(--theme-primary, #dc2626)" : "var(--theme-heading, #000000)"}
                   />
                 </div>
-              </button>
+              </Button>
 
               <div
                 className={cn(

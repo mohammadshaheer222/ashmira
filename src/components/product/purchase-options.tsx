@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import FeatherIcon from "@/assets/custom-icon";
 import { cn } from "@/lib/utils";
+import Button from "@/components/ui/button";
 
 interface PurchaseOptionsProps {
   price?: string;
@@ -33,7 +34,7 @@ export default function PurchaseOptions({
     <div className={cn("flex items-center gap-3 w-full pt-1", className)}>
       {/* ── Minimal Quantity Stepper ── */}
       <div className="inline-flex items-center bg-white-muted rounded-xl px-2.5 py-1.5 gap-2.5 border border-white-light shrink-0">
-        <button
+        <Button
           type="button"
           onClick={handleDecrement}
           disabled={quantity <= 1}
@@ -41,11 +42,11 @@ export default function PurchaseOptions({
           className="w-8 h-8 rounded-lg flex items-center justify-center text-heading hover:bg-black/5 disabled:opacity-30 cursor-pointer transition-colors text-base font-medium"
         >
           -
-        </button>
+        </Button>
         <span className="w-6 text-center text-sm font-semibold text-heading">
           {quantity}
         </span>
-        <button
+        <Button
           type="button"
           onClick={handleIncrement}
           disabled={quantity >= currentStock}
@@ -53,11 +54,11 @@ export default function PurchaseOptions({
           className="w-8 h-8 rounded-lg flex items-center justify-center text-heading hover:bg-black/5 disabled:opacity-30 cursor-pointer transition-colors text-base font-medium"
         >
           +
-        </button>
+        </Button>
       </div>
 
       {/* ── Add to Cart Button ── */}
-      <button
+      <Button
         type="button"
         onClick={handleAddToCart}
         className="flex-1 bg-primary hover:opacity-90 active:scale-[0.99] text-text-on-primary text-sm font-semibold py-3.5 px-6 rounded-xl transition-all duration-150 cursor-pointer shadow-xs text-center flex items-center justify-center gap-2"
@@ -70,7 +71,7 @@ export default function PurchaseOptions({
           iconStrokeColor="currentColor"
         />
         <span>{isAdded ? "Added to Cart ✓" : "Add to Cart"}</span>
-      </button>
+      </Button>
     </div>
   );
 }

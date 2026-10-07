@@ -4,6 +4,7 @@ import { Fragment, useEffect } from "react";
 
 import { cn } from "@/lib/utils";
 import FeatherIcon from "@/assets/custom-icon";
+import Button from "@/components/ui/button";
 
 import HeaderNav from "./header-nav";
 import HeaderLogo from "./header-logo";
@@ -53,13 +54,13 @@ export default function HeaderMobileDrawer({ open, onClose }: HeaderMobileDrawer
           <div className="bg-bg-card rounded-xl">
             <div className="relative flex items-center justify-between h-14 px-5">
               <HeaderLogo onClick={onClose} />
-              <button
+              <Button
                 onClick={onClose}
                 aria-label="Close menu"
                 className="p-2 text-text hover:text-heading transition-colors duration-200 flex items-center justify-center cursor-pointer"
               >
                 <FeatherIcon icon="close" iconWidth={20} iconHeight={20} iconStrokeWidth={1.75} />
-              </button>
+              </Button>
             </div>
           </div>
         </div>

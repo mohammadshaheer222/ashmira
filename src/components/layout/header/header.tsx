@@ -2,7 +2,7 @@ import { HeaderLogo, HeaderNav, HeaderActions } from "./index";
 
 export default function Header() {
   return (
-    <header className="sticky top-5 mob-land:top-3 z-50 w-full max-w-7xl m-auto sm-lap:max-w-full">
+    <header className="sticky top-5 mob-land:top-3 z-50 w-full max-w-7xl m-auto sm-lap:max-w-full mob-land:px-3">
       <div className="bg-bg-card shadow-card rounded-xl">
         <div className="relative flex items-center justify-between h-14 px-5">
           <HeaderLogo />

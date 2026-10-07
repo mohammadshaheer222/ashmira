@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+import Button from "@/components/ui/button";
 import Section from "@/components/ui/section";
 import FeatherIcon from "@/assets/custom-icon";
 import SectionHeader from "@/components/ui/section-header";
@@ -25,7 +26,7 @@ function FaqAccordionItem({ item, isOpen, onToggle }: FaqAccordionItemProps) {
           : "bg-bg-card/60 hover:bg-bg-card"
       )}
     >
-      <button
+      <Button
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
@@ -55,7 +56,7 @@ function FaqAccordionItem({ item, isOpen, onToggle }: FaqAccordionItemProps) {
             iconStrokeColor={isOpen ? "var(--theme-primary, #dc2626)" : "#000000"}
           />
         </div>
-      </button>
+      </Button>
       <div
         role={"region"}
         id={`faq-answer-${item.id}`}

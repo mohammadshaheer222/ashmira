@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Button from "@/components/ui/button";
 
 interface ProductGalleryProps {
   images: string[];
@@ -36,7 +37,7 @@ export default function ProductGallery({
         {images.map((img, idx) => {
           const isSelected = selectedIndex === idx;
           return (
-            <button
+            <Button
               key={idx}
               type="button"
               onClick={() => setSelectedIndex(idx)}
@@ -55,7 +56,7 @@ export default function ProductGallery({
                 sizes="120px"
                 className="object-contain p-2"
               />
-            </button>
+            </Button>
           );
         })}
       </div>
