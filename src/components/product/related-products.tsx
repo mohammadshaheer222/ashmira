@@ -29,7 +29,6 @@ export default function RelatedProducts({ products, className }: RelatedProducts
     <Section
       id="related-products"
       label="You might also like"
-      className="mob-land:py-20"
     >
       <SectionHeader
         align="center"

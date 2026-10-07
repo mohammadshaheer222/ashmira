@@ -14,8 +14,10 @@ interface ProductCardProps {
 export default function ProductCard({ product, className }: ProductCardProps) {
   return (
     <div
-      className={cn("rounded-2xl overflow-hidden flex flex-col shadow-card p-2 w-full", className)}
-      style={{ backgroundColor: "var(--theme-bg-card, #ffffff)" }}
+      className={cn(
+        "rounded-2xl overflow-hidden flex flex-col shadow-card p-2 w-full bg-bg-card mob-land:bg-white-soft",
+        className
+      )}
     >
       <Link
         href={`/product/${product.id}`}

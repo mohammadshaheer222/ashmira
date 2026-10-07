@@ -35,8 +35,7 @@ function FaqAccordionItem({ item, isOpen, onToggle }: FaqAccordionItemProps) {
         <div className="flex flex-col gap-1.5 pr-2">
           <h3
             className={cn(
-              "text-base font-semibold sm-lap:text-sm leading-snug transition-colors duration-200",
-              isOpen ? "text-primary" : "text-heading"
+              "text-base font-semibold sm-lap:text-sm leading-snug transition-colors duration-200 text-heading",
             )}
           >
             {item.question}
@@ -45,8 +44,7 @@ function FaqAccordionItem({ item, isOpen, onToggle }: FaqAccordionItemProps) {
 
         <div
           className={cn(
-            "w-8 h-8 rounded-full shrink-0 flex items-center justify-center transition-all duration-300",
-            isOpen ? "rotate-180 text-primary" : "text-heading"
+            "w-8 h-8 rounded-full shrink-0 flex items-center justify-center transition-all duration-300 text-heading",
           )}
         >
           <FeatherIcon

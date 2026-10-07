@@ -40,6 +40,7 @@ export default function PageContent({ product }: PageContentProps) {
                 price={product.price}
                 installmentPrice={product.installmentPrice}
                 rating={product.rating}
+                reviewCount={product.reviewCount}
                 badge={product.badge}
                 purchasedCount={product.purchasedCount}
               />

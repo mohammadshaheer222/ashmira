@@ -7,61 +7,64 @@ import { cn } from "@/lib/utils";
 interface ProductInfoProps {
   brand: string;
   name: string;
-  subtitle: string;
+  subtitle?: string;
   price: string;
-  installmentPrice: string;
+  installmentPrice?: string;
   rating: number;
+  reviewCount?: number;
   badge?: string;
-  purchasedCount: number;
+  purchasedCount?: number;
   className?: string;
-}
-
-function StarRating({ rating }: { rating: number }) {
-  const fullStars = Math.floor(rating);
-  const total = 5;
-
-  return (
-    <div className="flex items-center gap-1">
-      <div className="flex items-center gap-0.5">
-        {Array.from({ length: total }).map((_, i) => (
-          <FeatherIcon
-            key={i}
-            icon="star"
-            iconWidth={13}
-            iconHeight={13}
-            iconFillColor={i < fullStars ? "var(--theme-primary)" : "none"}
-            iconStrokeColor={i < fullStars ? "var(--theme-primary)" : "var(--theme-text-muted)"}
-            iconStrokeWidth={1}
-          />
-        ))}
-      </div>
-      <span className="text-xs font-semibold text-heading ml-1">{rating.toFixed(1)}</span>
-    </div>
-  );
 }
 
 export default function ProductInfo({
   brand,
+  name,
   subtitle,
   price,
-  installmentPrice,
   rating,
-  badge = "Best Seller",
-  purchasedCount = 88,
+  reviewCount = 142,
   className,
 }: ProductInfoProps) {
+  const fullStars = Math.floor(rating);
+
   return (
-    <div className={cn("flex flex-col gap-2 w-full", className)}>
-      <div>
-        <h1 className="text-2xl font-bold uppercase text-heading">
+    <div className={cn("flex flex-col gap-3 w-full", className)}>
+      {/* ── Brand & Rating Row ── */}
+      <div className="flex items-center justify-between">
+        <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-text-muted">
           {brand}
-        </h1>
-        <div className="flex items-center justify-between border-b border-white-light pb-3 text-xs text-text-muted">
-          <span>{subtitle}</span>
+        </span>
+        <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-0.5">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <FeatherIcon
+                key={i}
+                icon="star"
+                iconWidth={12}
+                iconHeight={12}
+                iconFillColor={i < fullStars ? "var(--theme-primary)" : "none"}
+                iconStrokeColor={i < fullStars ? "var(--theme-primary)" : "var(--theme-text-muted)"}
+                iconStrokeWidth={1.5}
+              />
+            ))}
+          </div>
+          <span className="text-xs font-semibold text-heading">{rating.toFixed(1)}</span>
+          <span className="text-xs text-text-muted">({reviewCount})</span>
         </div>
       </div>
-      <div className="flex items-baseline gap-2 flex-wrap">
-        <span className="text-2xl text-heading font-bold">{price}</span>
+
+      {/* ── Product Title ── */}
+      <h1 className="text-2xl sm-lap:text-xl font-bold text-heading leading-tight tracking-tight">
+        {name}
+      </h1>
+
+      {/* ── Price & Subtitle ── */}
+      <div className="flex items-baseline justify-between border-b border-white-light pb-4">
+        <span className="text-2xl font-bold text-heading">{price}</span>
+        {subtitle && (
+          <span className="text-xs text-text-muted font-normal">{subtitle}</span>
+        )}
       </div>
     </div>
   );
