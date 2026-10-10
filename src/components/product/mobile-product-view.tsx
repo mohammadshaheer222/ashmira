@@ -106,7 +106,7 @@ export default function MobileProductView({
         )}
       </div>
       <div className="w-full aspect-[4/4.8] max-h-[65vh] pointer-events-none" />
-      <div className="relative z-10 -mt-20 min-h-screen bg-bg-card rounded-t-[36px] p-5 pb-16 shadow-[0_-16px_40px_rgba(0,0,0,0.14)] flex flex-col gap-6">
+      <div className="relative z-10 -mt-10 min-h-screen bg-bg-card rounded-t-[36px] p-5 pb-16 shadow-[0_-16px_40px_rgba(0,0,0,0.14)] flex flex-col gap-6">
         <div className="flex flex-col gap-2.5">
           <h1 className="text-[22px] font-semibold text-heading leading-tight tracking-tight">
             {product.name}
